@@ -1,0 +1,30 @@
+1.布局div
+	图片跌在一起（position），之后用js来分散
+2.js脚本
+	1.先求的所有img的个数
+		getElementByTagName（）方法可返回带有指定标签名的对象的集合
+		getElementByTagName（）。length；
+	2.求得中间的mindex(因为都是以中间的图片为基准来分散的，确保在屏幕的最中间）
+	3.mindex放在最中间
+	    a.得到屏幕的宽度
+	    b.得到img的宽度  offsetWidth对象的可见宽度
+	    c.得到left的值  最中间图片的left值
+	    d.便利所有的img，然后设置left值
+		要以最中间的图片为基准
+	4.设置每一个img的3d效果，以最中间的图片为基准，设置中间图片的左边，中间，右边的旋转的角度,z；
+	    用for循环便利所有的img
+	    以mindex来判断设置的旋转角度和远近
+	    setAttribute（）方法添加指定的属性，并为其赋指定的值
+	5.当我点击图片 的时候，点击的那张图片放在最中间！其他的一两遍的形式来显示
+	    点击的这个index就是中间的图片，那么，我需要设置left的值！
+	    然后其他的用id语句来判断 i<index i== index i>index
+	    要把点击的这个index付给mindex
+	6.当船体大小发生改变的时候，需要设置
+	    window.onresize = function（）{addLeft（）；}
+
+
+
+
+
+
+

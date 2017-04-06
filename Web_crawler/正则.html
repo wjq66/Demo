@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>网络爬虫</title>
+</head>
+<body>
+   
+   <script>
+    /*RegExp是定义一组匹配文本字符串的规则，用来匹配或者检索字符串中间的内容*/
+       /*关键字:  .代表任意字符  */
+    var email = /^\w+@(\w+)\.com(\.cn)?$/i;//g：全局检索,i:忽略大小写,m:匹配换行内容
+    var str = "star@qq.com.cn";
+       
+       //通过email这个正则表达式来测试str这个字符串是否匹配email这个正则
+       //test方法返回的是一个boolean类型
+       /*如果仅仅只是用来做字符串的测试或匹配，我们用test*/
+       /*如果不仅仅要用来做字符串的测试，同时还要做字符串检索的话，我们用exec*/
+       if(email.exec(str)){
+           /*$1表示匹配第一组（）的内容*/
+           alert(RegExp.$1);
+       }
+    </script>
+</body>
+</html>
